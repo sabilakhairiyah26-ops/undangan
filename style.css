@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body, html {
+  height: 100%;
+  background: #d4d9cc;
+  overflow: hidden;
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+.fade-in.show {
+  opacity: 1;
+}
+
+/* HALAMAN PEMBUKA */
+.opening-screen {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: #d4d9cc;
+}
+
+.bg-photo {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: 0;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.opening-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 90%;
+}
+
+/* ✨ TEKS UNDANGAN (TIDAK MELEBAR) */
+.invite-text {
+  max-width: 90%;
+  width: 360px;
+  margin: 12px auto 20px;
+  line-height: 1.6;
+  text-align: center;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 500;
+  word-wrap: break-word;
+}
+
+
+.main-name {
+  font-family: 'Sacramento', cursive;
+  font-size: 2.2rem;
+  margin: 10px 0;
+}
+
+.open-btn {
+  background: white;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* HALAMAN UNDANGAN */
+.hidden {
+  display: none;
+}
+
+.main-invite {
+  position: relative;
+  height: 100vh;
+  text-align: center;
+  color: white;
+}
+
+.main-photo {
+  position: absolute;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
+  z-index: 0;
+  filter: brightness(85%);
+}
+
+.invite-header {
+  position: absolute;
+  top: 25px;
+  width: 100%;
+  text-align: center;
+  z-index: 2;
+  font-family: 'Sacramento', cursive;
+}
+
+.invite-header h1 {
+  font-size: 2.3rem;
+  margin-top: 5px;
+}
+
+/* INFO ACARA ESTETIK */
+.event-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px 25px;
+  color: #fff;
+  text-shadow: 0 0 6px rgba(0,0,0,0.3);
+  font-size: 0.95rem;
+  z-index: 2;
+  width: 85%;
+  max-width: 400px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.event-info h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #ffe9b6;
+}
+
+/* COUNTDOWN */
+.countdown-container {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 12px;
+  z-index: 2;
+  background: rgba(85, 70, 40, 0.6);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.count-item {
+  text-align: center;
+  color: #fff;
+}
+
+.count-item span {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.count-item small {
+  font-size: 0.7rem;
+  opacity: 0.8;
+}
+
+/* BUTTON */
+.calendar-btn {
+  position: absolute;
+  bottom: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  z-index: 2;
+}
